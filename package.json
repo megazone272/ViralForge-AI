@@ -1,0 +1,17 @@
+{
+  "name": "viralforge-ai",
+  "private": true,
+  "workspaces": ["apps/api", "apps/web"],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace @viralforge/api\" \"npm run dev --workspace @viralforge/web\"",
+    "build": "npm run build --workspace @viralforge/api && npm run build --workspace @viralforge/web",
+    "start": "npm run start --workspace @viralforge/api",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "render:demo": "node scripts/render-demo.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "prisma": "^6.14.0"
+  }
+}

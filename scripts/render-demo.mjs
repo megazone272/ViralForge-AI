@@ -1,0 +1,1 @@
+console.log("Demo renderer hook. The API renderer uses ffmpeg directly.");
